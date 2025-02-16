@@ -1,0 +1,1086 @@
+/* Import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scroll bar with gradient and trendy colors */
+::-webkit-scrollbar {
+    width: 12px; /* Slightly thicker for better visibility */
+}
+
+::-webkit-scrollbar-track {
+    background: #000000; /* Light grey background for the track */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Trendy pink-orange gradient */
+    border-radius: 10px; /* Rounded corners for a smoother appearance */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #6a11cb, #2575fc); /* Trendy purple-blue gradient on hover */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+
+/* All similar content styling codes */
+section {
+    padding: 100px 0;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+.about, .services, .skills, .teams, .contact, footer {
+    font-family: 'Poppins', sans-serif;
+}
+
+.about .about-content,
+.services .serv-content,
+.skills .skills-content,
+.contact .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .title {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600; /* Changed to a bolder weight */
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #1e2a47; /* Darker shade for better contrast */
+}
+
+section .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: linear-gradient(45deg, #ff6a00, #ee0979); /* Gradient with vibrant colors */
+    transform: translateX(-50%);
+}
+
+section .title::after {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: #f06d06; /* Trendy orange for the text */
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+/* Additional section content adjustments */
+section .about-content,
+section .services-content,
+section .skills-content,
+section .teams-content,
+section .contact-content {
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb); /* Soft blue gradient background for content */
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 50px 30px;
+    margin-bottom: 30px;
+}
+
+section .about-content h3,
+section .services-content h3,
+section .skills-content h3,
+section .teams-content h3,
+section .contact-content h3 {
+    font-size: 30px;
+    font-weight: 500;
+    color: #333; /* Darker color for section titles */
+    margin-bottom: 20px;
+}
+
+/* Call to Action Buttons (if any) */
+section .cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    background: linear-gradient(45deg, #ff6a00, #ee0979);
+    color: white;
+    text-align: center;
+    border-radius: 30px;
+    transition: background 0.3s ease;
+}
+
+section .cta-button:hover {
+    background: linear-gradient(45deg, #ee0979, #ff6a00);
+    cursor: pointer;
+}
+
+
+/* Navbar styling */
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+    background: linear-gradient(45deg, #6a11cb, #2575fc); /* Gradient blue background */
+    color: white; /* White text color for readability */
+}
+
+.navbar.sticky {
+    padding: 15px 0;
+    background:linear-gradient(45deg, #ae09e6, #fc2525); /* Dark background for sticky state */
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    color: #ffffff; /* White color for the logo */
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.navbar .logo a span {
+    color: #ff6347; /* Tomato color for accent in the logo */
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo a span {
+    color: #ffc107; /* Yellow color for the logo accent when sticky */
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+    color: white; /* White text for menu items */
+}
+
+.navbar .menu li a {
+    display: block;
+    color: #ffffff; /* White color for menu items */
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+    color: #ffdd57; /* Light yellow on hover for better visibility */
+    text-decoration: underline; /* Add underline effect on hover */
+}
+
+.navbar.sticky .menu li a:hover {
+    color: #ffc107; /* Yellow color on hover when sticky */
+}
+
+
+/* Menu button styling */
+.menu-btn {
+    color: #ffffff; /* White color for the menu button */
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+    transition: color 0.3s ease;
+}
+
+.menu-btn:hover {
+    color: #ff6347; /* Tomato color on hover for better visibility */
+}
+
+/* Scroll-up button styling */
+.scroll-up-btn {
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: linear-gradient(45deg, #6a11cb, #2575fc); /* Purple to blue gradient for modern look */
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #ffffff; /* White text color to ensure readability */
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show {
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.scroll-up-btn:hover {
+    filter: brightness(90%); /* Slight darkening effect */
+    transform: scale(1.1); /* Slight scaling effect to make it more interactive */
+    background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Changing gradient on hover to warm tones */
+}
+
+/* Optional: If you want to ensure the text stays readable in the menu button */
+.menu-btn,
+.scroll-up-btn {
+    font-weight: bold; /* Ensure the icons or text are clear and visible */
+}
+
+
+/* Home section styling */
+.home {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    background: url("images/2bede1c8-3815-4498-be81-4d37e591cd98.jpeg") no-repeat center;
+    height: 100vh;
+    color: #ffffff; /* White text for high contrast */
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 0 20px; /* Add horizontal padding */
+    text-align: center; /* Center text */
+}
+
+
+.home .max-width {
+    width: 100%;
+    max-width: 1200px; /* Limit max width for better readability */
+    display: flex;
+    flex-direction: column; /* Stack elements */
+    align-items: center; /* Center elements */
+}
+
+.home .home-content {
+    margin: 20px 0; /* Add vertical margin for spacing */
+}
+
+.home .home-content .text-1 {
+    font-size: 27px;
+    font-weight: 500;
+    color: #f0f0f0; /* Light grey for contrast */
+}
+
+.home .home-content .text-2 {
+    font-size: 75px;
+    font-weight: 700;
+    margin: 10px 0; /* Add margin for spacing */
+    color: #ff7e5f; /* Trendy coral color for main heading */
+}
+
+.home .home-content .text-3 {
+    font-size: 40px;
+    margin: 10px 0; /* Add margin for spacing */
+    color: #ffffff; /* White text for high contrast */
+}
+
+.home .home-content .text-3 span {
+    color: #ffdd57; /* Yellow color for emphasis on span */
+    font-weight: 500;
+}
+
+.home .home-content a {
+    display: inline-block;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Gradient from pink to orange */
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px; /* Space above button */
+    font-weight: 600;
+    border-radius: 6px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+}
+
+.home .home-content a:hover {
+    color: #272525; /* Keep text white on hover */
+    background: none;
+    border: 2px solid #ff7e5f; /* Coral border on hover */
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+
+/* About section styling */
+
+.about .title::after {
+    content: "Who I Am";
+    font-size: 30px;
+    font-weight: 500;
+    color: #6a11cb; /* Purple color for the title */
+}
+
+/* About section content layout */
+.about .about-content .left {
+    width: 45%;
+}
+
+.about .about-content .left img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 5px solid #000000; /* White border around the image */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.about .about-content .right {
+    width: 55%;
+}
+
+.about .about-content .right .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333; /* Darker color for better contrast */
+}
+
+.about .about-content .right .text span {
+    color: #ff6347; /* Tomato color for emphasis */
+}
+
+.about .about-content .right p {
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555; /* Light grey text for readability */
+}
+
+/* Button styling with gradient */
+.about .about-content .right a {
+    display: inline-block;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Gradient from pink to orange */
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+/* Hover effect for the button */
+.about .about-content .right a:hover {
+    color: #fff; /* Keep text white */
+    background: none;
+    border: 2px solid #ff7e5f; /* Coral border on hover */
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+
+/* Services Section Styling */
+.portfolio {
+    padding: 100px 0;
+    background: #222; /* Dark background for better contrast */
+    color: #fff; /* White text color */
+}
+
+/* Title Styling */
+.portfolio .title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 60px;
+    position: relative;
+    color: #ffdd57; /* Yellow for a trendy look */
+}
+
+.portfolio .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #ffdd57; /* Yellow accent line */
+    transform: translateX(-50%);
+}
+
+/* Portfolio Content Styling */
+.portfolio-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Portfolio Item Styling */
+.portfolio-item {
+    width: calc(33% - 20px); /* Three items per row */
+    background: linear-gradient(145deg, #495057, #343a40); /* Dark grey gradient */
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-item:hover {
+    background: linear-gradient(45deg, #aa2808, #887bfe); /* Gradient on hover */
+}
+
+.portfolio-item .box {
+    flex: 1; /* Ensures it takes up the available space */
+    padding: 50px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures the button is pushed down */
+    transition: all 0.3s ease;
+}
+
+/* Hover effect on portfolio item */
+.portfolio-item:hover .box {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Icon Styling */
+.portfolio-item i {
+    font-size: 50px;
+    color: #007bff; /* Blue */
+    transition: color 0.3s ease;
+}
+
+.portfolio-item:hover i {
+    color: #fff; /* White on hover */
+}
+
+/* Heading Styling */
+.portfolio-item h3 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #ffffff; /* White text for headings */
+}
+
+/* Paragraph Styling */
+.portfolio-item p {
+    font-size: 16px;
+    color: #ccc; /* Light grey text for paragraph */
+    margin-bottom: 15px;
+}
+
+/* View Button Styling */
+.view-btn {
+    display: inline-block;
+    margin-top: 20px; /* Adds spacing from the paragraph */
+    background: #ff4d4d; /* Red for call-to-action */
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.view-btn:hover {
+    background: #28a745; /* Green on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .portfolio-item {
+        width: calc(50% - 20px); /* Two items per row */
+    }
+}
+
+@media (max-width: 690px) {
+    .portfolio-item {
+        width: 100%; /* One item per row */
+    }
+}
+
+
+/* Skills Section Styling */
+.skills {
+    background-image: url('images/colorful-abstract-illustration-wave-words-word-bottom_1026912-32629.avif');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    color: #fff;
+}
+
+.skills .title::after {
+    content: "What I Know";
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffdd57; /* Yellow color for the subtitle */
+    display: block;
+    margin-top: 10px;
+}
+
+/* Skills Content Layout */
+.skills .skills-content .column {
+    width: calc(50% - 30px); /* Two columns layout */
+    margin-bottom: 30px; /* Adds spacing between columns */
+}
+
+/* Left Column Text Styling */
+.skills .skills-content .left .text {
+    font-size: 22px; /* Slightly larger text */
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #000000; /* Darker text for contrast */
+}
+
+.skills .skills-content .left p {
+    text-align: justify;
+    font-size: 16px; /* Standard text size */
+    line-height: 1.6; /* Improved line spacing */
+    color: #000000; /* Lighter grey text for readability */
+}
+
+/* Button Styling */
+.skills .skills-content .left a {
+    display: inline-block;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Gradient from pink to orange */
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid transparent; /* Transparent border for smooth transition */
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-align: center; /* Center the text in the button */
+}
+
+.skills .skills-content .left a:hover {
+    background: none;
+    color: #ff7e5f; /* Color changes to pinkish red on hover */
+    border-color: #ff7e5f; /* Border changes to pink on hover */
+}
+
+/* Right Column Styling for Skill Bars */
+.skills .skills-content .right .bars {
+    margin-bottom: 25px; /* Adds spacing between skill bars */
+}
+
+.skills .skills-content .right .info {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Skill Labels */
+.skills .skills-content .right span {
+    font-weight: 600;
+    font-size: 18px;
+    color: #000000; /* Darker color for labels */
+}
+
+/* Skill Bar Background */
+.skills .skills-content .right .line {
+    height: 10px; /* Slightly increased height for visibility */
+    width: 100%;
+    background: linear-gradient(90deg, #ff8400, #6a00ff); /* Light grey background for skill bars */
+    position: relative;
+    border-radius: 8px; /* Rounded corners for a smoother look */
+}
+
+/* Skill Bar Progress */
+.skills .skills-content .right .line::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: linear-gradient(90deg, #ff8400, #0072ff); /* Trendy gradient from light blue to dark blue */
+    border-radius: 8px; /* Rounded corners for progress */
+}
+
+/* Skill Bar Specific Progress Values */
+.skills-content .right .html::before {
+    width: 90%; /* HTML skill progress */
+}
+
+.skills-content .right .css::before {
+    width: 60%; /* CSS skill progress */
+}
+
+.skills-content .right .js::before {
+    width: 80%; /* JavaScript skill progress */
+}
+
+.skills-content .right .php::before {
+    width: 50%; /* PHP skill progress */
+}
+
+.skills-content .right .mysql::before {
+    width: 70%; /* MySQL skill progress */
+}
+
+
+/* Add responsive design to ensure the layout adjusts on smaller screens */
+@media (max-width: 768px) {
+    .skills .skills-content .column {
+        width: 100%; /* Stack columns on small screens */
+        margin-bottom: 20px;
+    }
+
+    .skills .skills-content .left .text {
+        font-size: 18px; /* Slightly smaller text on mobile */
+    }
+
+    .skills .skills-content .left p {
+        font-size: 14px; /* Smaller text on mobile */
+    }
+
+    .skills .skills-content .right .info {
+        flex-direction: column; /* Stack info on mobile */
+        align-items: flex-start;
+    }
+
+    .skills .skills-content .right .line {
+        height: 6px; /* Smaller bars on mobile */
+    }
+}
+
+
+
+/* contact section styling */
+/* Basic reset for margins and padding */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Clean font */
+    background-color: #f8f9fa; /* Light background */
+}
+
+/* Centering the contact section */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px 20px;
+    background-color: #f8f9fa;
+}
+
+.contact .contact-content {
+    display: flex;
+    flex-direction: column;  /* Stack the contact form elements in a column */
+    justify-content: center;
+    align-items: center;
+    max-width: 800px; /* Limit width to keep the form compact */
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+/* Title with icon */
+.contact .title::after {
+    content: "Get in touch";
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/* Form layout for left and right sections */
+.contact .column {
+    width: 100%; /* Full width for the column */
+    margin-bottom: 15px;
+}
+
+/* Row layout for fields */
+.contact .contact-content .row {
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Styling for the individual form fields (Name, Address, Email) */
+.contact .contact-content .field {
+    width: 100%; /* Full width */
+}
+
+.contact .contact-content .field input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus effect for input fields */
+.contact .contact-content .field input:focus {
+    border-color: #007bff; /* Blue border on focus */
+}
+
+/* Button styling */
+.contact .button-area {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.contact .button-area button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact .button-area button:hover {
+    background-color: transparent;
+    border: 2px solid #007bff;
+    color: #007bff;
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 768px) {
+    .contact .contact-content {
+        padding: 20px;
+    }
+
+    .contact .contact-content .row {
+        gap: 15px;
+    }
+
+    .contact .contact-content .field {
+        width: 100%; /* Full width for fields on small screens */
+    }
+}
+
+/* Footer Styling */
+footer {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Trendy blue-purple gradient */
+    color: white; /* White text for contrast */
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+    border-radius: 6px; /* Optional: Rounded corners for a modern look */
+}
+
+/* Styling for links inside footer */
+footer span a {
+    color: #fff; /* White color for links */
+    text-decoration: none;
+    font-weight: 500; /* Slightly bolder text */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth hover effects */
+}
+
+/* Hover effect for footer links */
+footer span a:hover {
+    color: #ff7e5f; /* Soft coral color for hover */
+    text-decoration: underline; /* Underline effect on hover */
+}
+
+/* Optional: footer text on hover effect */
+footer:hover {
+    filter: brightness(0.9); /* Slightly darken the background on hover */
+}
+
+
+/* responsive media query start */
+@media (max-width: 1104px) {
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #343a40; /* Dark grey */
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .max-width{
+        max-width: 930px;
+    }
+    .about .about-content .column{
+        width: 100%;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+        flex: 100%;
+    }
+    .services .serv-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .skills .skills-content .column,
+    .contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+    .home .home-content a{
+        font-size: 20px;
+    }
+    .services .serv-content .card{
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 27px;
+    }
+    .about .about-content .right .text,
+    .skills .skills-content .left .text{
+        font-size: 19px;
+    }
+    .contact .right form .fields{
+        flex-direction: column;
+    }
+    .contact .right form .name,
+    .contact .right form .email{
+        margin: 0;
+    }
+    .right form .error-box{
+       width: 150px;
+    }
+    .scroll-up-btn{
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }
+}
+
+/* Book Section Styling */
+.book-section {
+    padding: 50px 0; /* Add padding to the section */
+    background-color: #fff; /* Set background color of the section to white */
+    color: #000; /* Ensure the text is black for better contrast on the section */
+}
+
+/* Max Width for the container */
+.max-width {
+    max-width: 1200px; /* Limit max width */
+    margin: 0 auto; /* Center the section */
+}
+
+/* Flex container for the book items */
+.book-container {
+    display: flex; /* Use flexbox for rows */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: center; /* Center the items */
+    gap: 30px; /* Increased spacing between items */
+}
+
+/* Book card styling */
+.book {
+    position: relative;
+    border-radius: 10px;
+    width: 320px; /* Set a slightly larger fixed width for better visibility */
+    height: 450px; /* Increase height for better content display */
+    background: #fff; /* White background for the book card */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+    transform: perspective(2000px); /* Create 3D effect */
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+    align-items: center;
+    justify-content: flex-start; /* Align items to the top */
+    overflow: hidden; /* Prevent overflow of content */
+    padding: 20px; /* Add padding for content spacing */
+    transition: transform 0.3s ease-in-out; /* Smooth transformation */
+}
+
+.book:hover {
+    transform: scale(1.05); /* Slight scale up effect on hover */
+}
+
+/* Book cover styling */
+.cover {
+    top: 0;
+    position: absolute;
+    background: linear-gradient(135deg, #f3c623, #ff8500); /* Gradient background for the cover (gold to orange) */
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.5s; /* Only transition transform */
+    transform-origin: left; /* Change origin for a more natural flip */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow around cover */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; /* Ensure cover is on top */
+}
+
+/* Flip effect on hover */
+.book:hover .cover {
+    transform: rotateY(-180deg); /* Rotate fully to reveal content */
+}
+
+/* Content styling (back of the card) */
+.content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the backface */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Center the content */
+    padding: 20px;
+    background: linear-gradient(135deg, #6a82fb, #fc5c7d); /* Purple to pink gradient */
+    color: #fff; /* White text for readability */
+}
+
+/* Image container */
+.img-container {
+    height: 200px; /* Fixed height for image container */
+    width: 100%; /* Full width for image */
+}
+
+img {
+    width: 100%; /* Make image take full width */
+    height: 100%; /* Fill the container */
+    object-fit: cover; /* Ensure image covers the space */
+    border-radius: 10px; /* Match the border radius of the book */
+    z-index: 0; /* Ensure image is below the cover */
+}
+
+/* Text styling */
+p {
+    font-size: 18px; /* Adjust font size for better visibility */
+    font-weight: bold;
+    text-align: center; /* Center the text */
+    margin: 10px 0; /* Add margin for spacing */
+    color: #000000; /* White color for text inside content */
+}
+
+/* Hover effects on book items */
+.book:hover .content p {
+    color: #010101; /* Gold color for text on hover */
+}
+
+/* Button for more details */
+.view-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #00d2ff, #3a7bd5); /* Gradient blue button */
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.view-btn:hover {
+    background: linear-gradient(135deg, #ff9a8b, #ff6a00); /* Gradient on hover */
+    transform: scale(1.05); /* Button scale effect on hover */
+}
+
+
+
